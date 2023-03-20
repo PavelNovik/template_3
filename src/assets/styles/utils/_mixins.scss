@@ -1,0 +1,106 @@
+@mixin h1() {
+    font-size: 7rem;
+    color: $white;
+    font-family: $mainFont;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@mixin h2($fw: bold, $color: $white) {
+    font-size: 4.5rem;
+    color: $color;
+    font-family: $mainFont;
+    font-weight: $fw;
+}
+
+@mixin h3($fw: bold, $color: $black) {
+    font-size: 3rem;
+    font-family: $mainFont;
+    font-weight: $fw;
+    color: $color;
+    text-transform: uppercase;
+}
+
+@mixin h4($fw: bold, $color: $black) {
+    font-size: 2rem;
+    font-family: $mainFont;
+    font-weight: $fw;
+    color: $color;
+    text-transform: uppercase;
+}
+
+@mixin p1($fs: 1.6rem, $fw: normal, $color: $gray) {
+    font-size: $fs;
+    font-weight: $fw;
+    font-family: $mainFont;
+    color: $color;
+}
+
+@mixin logo($width: 15rem, $height: 15rem, $borderColor: $white) {
+    border: 2px solid $borderColor;
+    border-radius: 100px;
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin logoText($ff: $logoFont, $fs: 4.5rem, $color: $white) {
+
+    font-size: $fs;
+    color: $color;
+    font-family: $ff;
+    text-transform: uppercase;
+
+}
+
+@mixin logoClient() {
+    width: 25.7rem;
+    height: 16.2rem;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin logoContainer($width: 21rem, $height: 6rem) {
+    width: $width;
+    height: $height;
+    position: relative;
+
+}
+
+@mixin btn($fs: 1.55rem, $fw:600, $width: 16rem, $height: 4.2rem) {
+    font-family: $mainFont;
+    font-size: $fs;
+    font-weight: $fw;
+    width: $width;
+    height: $height;
+    border: 2px solid $orange;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%light {
+    color: $black;
+    background-color: $white;
+}
+
+%orange {
+    color: $white;
+    background-color: $orange;
+}
+
+%divider {
+    width: 0.4rem;
+    height: 4.5rem;
+    background-color: $orange;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}

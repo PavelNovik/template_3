@@ -1,0 +1,265 @@
+@import './utils';
+@import './components';
+
+body {
+    background-color: rgb(231, 193, 193);
+}
+
+.divider {
+    height: 50px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.ui__title {
+    font-size: 3.5rem;
+    color: tomato;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.logo {
+    @include logo();
+}
+
+.logoText {
+    @include logoText();
+}
+
+.menu__items {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: $mainFont;
+    list-style: none;
+
+
+}
+
+.menu__item {
+    display: inline;
+    color: $white;
+
+    &:nth-child(n+2) {
+        &::before {
+            content: "\2216 \2216";
+        }
+    }
+
+    &>a {
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 2rem;
+        margin-left: 2rem;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__chapter {
+    @include logo(12.5rem, 12.5rem, #f39c12);
+}
+
+.chapter__text {
+    @include logoText(far, 4rem, $black);
+}
+
+.logo__person {
+    @include logo(20rem, 20rem, $lightGray);
+    background-color: #e8f8f4;
+}
+
+.person__text {
+    @include logoText(fas, 6.2rem, $white);
+}
+
+.logo__indicator {
+    @include logo(17rem, 17rem, $orange);
+
+    &:hover {
+        border-color: $white;
+
+        .indicator__text {
+            color: $orange;
+        }
+    }
+}
+
+.indicator__text {
+    @include logoText(far, 3.2rem, $white);
+}
+
+.logo__direction {
+    @include logo(10.5rem, 10.5rem, $orange);
+
+    &:hover {
+        background-color: $orange;
+
+        .direction__text {
+            color: $white;
+        }
+    }
+}
+
+.direction__text {
+    @include logoText(far, 2.8rem, $darkGray);
+}
+
+.logo__section {
+    @include logo(10rem, 10rem, $white);
+
+}
+
+.section__text {
+    @include logoText(fab, 3rem, $orange);
+}
+
+.logo__contact {
+    @include logo(3.4rem, 3.4rem, $orange);
+
+}
+
+.contact__text {
+    @include logoText(fas, 1.8rem, $black);
+}
+
+.logo__client {
+    @include logoClient();
+
+
+}
+
+.logo__container {
+    @include logoContainer();
+
+    &>.main__echo {
+        position: absolute;
+        width: 100%;
+
+    }
+
+    &>.echo__text {
+        position: absolute;
+        width: 35%;
+        left: 8.5rem;
+        top: 4rem;
+    }
+}
+
+.h1 {
+    @include h1();
+}
+
+.h2 {
+    @include h2(300, $white);
+    text-transform: uppercase;
+
+    &-b {
+        @include h2();
+
+    }
+}
+
+.h3 {
+    @include h3(bold, $white);
+
+}
+
+.h4 {
+    @include h4();
+
+}
+
+.p1 {
+    @include p1();
+
+    &>span {
+        font-size: 1.5rem;
+        color: $darkGray;
+    }
+
+    &-r {
+        @include p1(2rem, 300, $red);
+    }
+}
+
+.chapter {
+    &__description {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &__title {
+        @include h3();
+    }
+
+    &__divider {
+        @extend %divider;
+    }
+
+    &__article {
+        @include p1();
+        text-transform: uppercase;
+        overflow: hidden;
+        width: 88.3rem;
+        height: 4rem;
+
+    }
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70rem;
+}
+
+
+.header__btn {
+    @include btn();
+    @extend %light;
+
+    &:hover {
+        @extend %orange;
+    }
+}
+
+.price__btn {
+    @include btn(1.45rem, 600, 13rem, 3.8rem);
+    @extend %light;
+
+    &:hover {
+        @extend %orange;
+    }
+}
+
+.feature__btn {
+    @include btn(1.25rem, bold, 10.5rem, 3.5rem);
+    @extend %light;
+
+    &:hover {
+        @extend %orange;
+    }
+}
+
+.form__btn {
+    @include btn(1.45rem, 600, 13rem, 3.8rem);
+    @extend %light;
+
+    &:hover {
+        @extend %orange;
+    }
+}

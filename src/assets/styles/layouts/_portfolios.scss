@@ -1,0 +1,241 @@
+.portfolio {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+        &>.chapter__description {
+            margin-top: 0;
+        }
+    }
+}
+
+.artwork {
+    width: 100%;
+    height: 58rem;
+    background-color: $orange;
+    padding-left: calc(50% - 3.5rem);
+    padding-top: 25.5rem;
+    margin-top: 12rem;
+
+    &>i {
+        font-size: 7.1rem;
+        color: $white;
+    }
+}
+
+.artwork-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.turn {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid #e6e6e6;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 0.2rem;
+    margin-top: 5rem;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    &-left {
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+
+    &-right {
+        font-weight: bold;
+    }
+
+    &-close {
+        margin-left: 0.5rem;
+    }
+}
+
+.artwork-title {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0d0d0d;
+}
+
+.artwork-coment {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    color: #808080;
+    text-transform: capitalize;
+}
+
+
+.portfolio__menu {
+
+    &>.menu__items {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: bold;
+        font-family: $mainFont;
+        list-style: none;
+        width: 100%;
+        margin-left: 10rem;
+        // position: absolute;
+        // right: 0;
+
+
+        &>.menu__item {
+            display: inline;
+            text-align: right;
+            color: #a6a6a6;
+
+            &:nth-child(n+2) {
+                &::before {
+                    content: "\2216 \2216";
+                }
+            }
+
+            &:first-child {
+                margin-left: 15rem;
+
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &>a {
+                color: $black;
+                text-decoration: none;
+                cursor: pointer;
+                margin-right: 0.5rem;
+                margin-left: 0.5rem;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+.portfolio {
+    &__projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 8rem;
+        margin-bottom: 12rem;
+    }
+
+    &__project {
+        width: 29.3rem;
+        height: 30rem;
+
+        &:nth-child(even) {
+
+            width: 29.2rem;
+
+            .project__foto {
+                background-color: #b7b7b7;
+
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .round-plus {
+                opacity: 0.5;
+            }
+
+            .project__title {
+                color: $orange;
+            }
+
+            .project__foto {
+                background-color: rgba(255, 255, 255, 0.5);
+                background-image: url(../images/layer-52-copy.png);
+
+                &>i {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.project__foto {
+    width: 100%;
+    height: 22rem;
+    background-color: #c7c7c7;
+    text-align: center;
+    position: relative;
+
+
+
+    &>i {
+        font-size: 7.1rem;
+        color: $white;
+        margin-top: 7rem;
+        z-index: 1;
+
+    }
+}
+
+.project {
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $black;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    &__direction {
+        font-size: 1.4rem;
+        color: #8c8c8c;
+        text-transform: capitalize;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
+
+.round-plus {
+    width: 9.9rem;
+    height: 9.9rem;
+    background-color: $orange;
+    opacity: 0;
+    border-radius: 5rem;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 37%;
+    left: 33%;
+    align-items: center;
+
+
+    &>.wline {
+        width: 4.6rem;
+        height: 0.1rem;
+        background-color: $white;
+        position: absolute;
+    }
+
+    &>.hline {
+        width: 0.1rem;
+        height: 4.6rem;
+        background-color: $white;
+        position: absolute;
+    }
+}

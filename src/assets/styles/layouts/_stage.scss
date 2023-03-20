@@ -1,0 +1,330 @@
+.stage__divider {
+    background-image: url(../images/layer-68@3x.png);
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 70rem;
+    // padding-top: 6rem;
+    background-position: top;
+    // background-position: bottom;
+    // background-size: cover;
+    // background-origin: content-box;
+    // background-size: 100vw auto;
+    background-size: auto 100%;
+    position: relative;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    &:last-child {
+        background-image: url(../images/layer-48@3x.png);
+        height: 60rem;
+        margin-bottom: 4rem;
+    }
+
+
+
+    &::after {
+        content: "";
+        width: 0px;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 10rem solid transparent;
+        border-right: 100vw solid $white;
+        border-bottom: 0px solid transparent;
+    }
+
+    &::before {
+        content: "";
+        width: 0px;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 0px solid transparent;
+        border-left: 100vw solid $white;
+        border-bottom: 10rem solid transparent;
+    }
+
+    &>.container {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        position: relative;
+        // align-self: center;
+
+    }
+
+    &-article {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &-quotes {
+        margin-left: 3rem;
+        margin-top: 26rem;
+        width: 4.8rem;
+        height: 2.7rem;
+        font-size: 11rem;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.55;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+
+        &:last-child {
+            transform: rotate(180deg);
+            margin-top: 25rem;
+            margin-right: 3rem;
+            margin-left: 0;
+            // margin-bottom: 0;
+        }
+
+    }
+
+    &-h2 {
+        @include h2();
+        margin-top: 25rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        text-align: center;
+
+    }
+}
+
+.place__divider {
+    margin-top: 2.5rem;
+    width: 5rem;
+    height: 0.4rem;
+    background-color: $orange;
+}
+
+.author {
+    margin-top: 0.5rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 2.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.indicators__place {
+    margin-top: 19.4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stage__divider-portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>.author {
+        margin-top: 18rem;
+    }
+
+    &>.place__divider {
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    &>.author__article {
+
+        width: 76.7rem;
+        height: 5.5rem;
+        font-size: 2rem;
+        font-weight: 300;
+
+        font-style: italic;
+        line-height: 1.36;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+
+    }
+
+    &>.author__photo {
+        margin-top: 3rem;
+        width: 10rem;
+        height: 10rem;
+        border: 2px solid $white;
+        border-radius: 5rem;
+        background-image: url(../images/layer-15@3x.png);
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.stage__divider-blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>.article {
+        margin-top: 3rem;
+        width: 83rem;
+        height: 7rem;
+        overflow: hidden;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.5;
+        text-align: center;
+        color: #fff;
+
+        &>span {
+            color: $orange;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    &>.timing {
+        font-size: 15px;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 2.53;
+        color: #808080;
+        margin-top: 1rem;
+    }
+}
+
+.logo__section {
+    margin-top: 23rem;
+    @include logo(10rem, 10rem, $white);
+
+
+    &>.section__text {
+        @include logoText(fab, 3rem, $orange);
+    }
+}
+
+.stage__divider-contact {
+    width: 100%;
+
+    &>.clients {
+        text-align: center;
+        margin-top: 20rem;
+        margin-bottom: 5.5rem;
+
+        &>.h3 {
+            @include h3(bold, $white);
+        }
+    }
+}
+
+.logo__client {
+    @include logoClient();
+    overflow: hidden;
+
+
+}
+
+.logo__container {
+    @include logoContainer();
+
+
+
+    &>.main__echo {
+        position: absolute;
+        width: 100%;
+
+    }
+
+    &>.echo__text {
+        position: absolute;
+        width: 35%;
+        left: 8.5rem;
+        top: 4rem;
+    }
+
+    &>.rcircl {
+        position: absolute;
+        bottom: 2rem;
+        left: 1rem;
+    }
+
+    &>.gcircl {
+        position: absolute;
+        bottom: 2rem;
+        left: 3.5rem;
+    }
+
+    &>.bcircl {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    &>.color {
+        position: absolute;
+        left: 8.5rem;
+        top: 1.5rem;
+    }
+
+    &>.piano {
+        width: 25rem;
+        position: absolute;
+        top: -7rem;
+        right: -2rem;
+    }
+
+    &>.continens {
+        position: absolute;
+        top: -7.2rem;
+        right: -2.2rem;
+    }
+}
+
+.clients__logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map__marker {
+    margin-top: 28rem;
+    position: relative;
+}
+
+.logo__adress-wrapper {
+    position: absolute;
+    top: -1rem;
+    left: -8rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: burlywood;
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(135deg);
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1rem -0.7rem 4rem 0.3rem rgba(0, 0, 0, 0.6);
+
+    &>.logo__adress-backgrnd {
+        background-color: $orange;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-135deg);
+
+        &>i {
+            color: $white;
+            font-size: 1.9rem;
+        }
+    }
+}

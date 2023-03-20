@@ -1,0 +1,129 @@
+.logo__contact {
+    @include logo(3.4rem, 3.4rem, $orange);
+    margin-right: 1.9rem;
+}
+
+.contact__text {
+    @include logoText(fas, 1.8rem, $black);
+
+}
+
+.form__btn {
+    @include btn(1.45rem, 600, 13rem, 3.8rem);
+    @extend %light;
+
+    &:hover {
+        @extend %orange;
+    }
+}
+
+.forms__title,
+.info__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+}
+
+.info__article {
+    width: 46.7rem;
+    height: 7rem;
+    overflow: hidden;
+    font-size: 16px;
+    color: #737373;
+    margin-bottom: 2.8rem;
+}
+
+.info__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 0.8rem;
+
+}
+
+.info__adress {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: -0.32px;
+    text-align: left;
+    color: #0d0d0d;
+
+}
+
+.contact__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12rem;
+}
+
+.contact__forms {
+
+    width: 63rem;
+}
+
+.contact__info {
+    width: 46.7rem;
+}
+
+.form__area {
+    position: relative;
+
+    &>span {
+        position: absolute;
+        font-size: 1.8rem;
+        color: #808080;
+        right: 4.5rem;
+        margin-top: 1.3rem;
+    }
+}
+
+input.user-name,
+input.user-email {
+    width: 61.9rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
+    color: #808080;
+    border: 2px solid #d9d9d9;
+    text-indent: 2.8rem;
+    margin-bottom: 1rem;
+    outline: none;
+
+    &:focus {
+        border: 2px solid $orange;
+    }
+
+    &:focus+.far {
+        color: orange;
+    }
+}
+
+textarea.user-message {
+    resize: none;
+    width: 61.9rem;
+    height: 12.5rem;
+    font-family: $mainFont;
+    font-size: 1.5rem;
+    text-indent: 2.8rem;
+    text-align: left;
+    border: 2px solid #d9d9d9;
+    padding-top: 1rem;
+    margin-bottom: 2.2rem;
+    outline: none;
+
+    &:focus {
+        border-color: $orange;
+    }
+}
+
+textarea:focus+.fa-pencil-alt {
+    color: orange;
+}

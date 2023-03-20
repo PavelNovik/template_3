@@ -1,0 +1,106 @@
+.feature__btn {
+    @include btn(1.25rem, bold, 10.5rem, 3.5rem);
+    @extend %light;
+
+    &:hover {
+        @extend %orange;
+    }
+}
+
+.blog {
+&__wrapper {
+    margin-top: 12rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+    &__item {
+        width: 55.5rem;
+        height: 49rem;
+
+    }
+
+    &__photo {
+        width: 100%;
+        height: 30rem;
+        background-color: #b7b7b7;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: flex-end;
+
+        &>i {
+            color: $white;
+            font-size: 7.1rem;
+            position: absolute;
+            right: 23rem;
+            bottom: 12rem;
+        }
+
+        &-icon {
+            width: 4.4rem;
+            height: 4.4rem;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            background-color: $orange;
+
+            &>i {
+                font-size: 2.1rem;
+                color: $white;
+                position: absolute;
+            }
+        }
+
+        &-title {
+            width: 44.5rem;
+            height: 6rem;
+            background-color: $white;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $black;
+            text-align: center;
+            padding-top: 2.5rem;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    &__date {
+        height: 10.7rem;
+        width: 11rem;
+        text-align: right;
+        font-size: 1.4rem;
+        line-height: 1.71;
+        color: #808080;
+        padding-top: 2rem;
+        padding-right: 1.8rem;
+    }
+
+    &__info {
+        margin-top: 1.9rem;
+        padding-right: 1rem;
+    }
+
+    &__article {
+        width: 40.8rem;
+        height: 9rem;
+        font-size: 1.6rem;
+        color: #737373;
+        overflow: hidden;
+        margin-bottom: 2.8rem;
+    }
+}

@@ -1,0 +1,44 @@
+.service {
+    &__item {
+        width: 36.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+            .service__logo {
+                background-color: $orange;
+            }
+            .service__logo>i {
+                color: $white;
+            }
+        }
+    }
+
+    &__logo {
+        @include logo(10.5rem, 10.5rem, $orange);
+
+        &>i {
+
+            font-size: 2.8rem;
+            color: $darkGray;
+        }
+    }
+
+    &__direction {
+        @include h4();
+        margin-top: 3rem;
+
+    }
+
+    &__description {
+        @include p1();
+        width: 36.7rem;
+        height: 10.1rem;
+        line-height: 1.6;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 2.6rem;
+    }
+
+}

@@ -1,0 +1,122 @@
+.price {
+
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 25rem;
+        height: 46rem;
+        border-top: 1.6rem solid $white;
+        border-bottom: 1rem solid $white;
+        background-color: $white;
+        padding-bottom: 0.1rem;
+
+        &:hover {
+            border-top: 1.6rem solid $orange;
+            border-bottom: 1rem solid #e6e6e6;
+
+            .price__name {
+                color: $white;
+
+                &>hr {
+                    background-color: $white;
+                }
+            }
+
+            .price__name-cost {
+                background-color: $orange;
+                border: 1px solid $orange;
+            }
+
+            .price__description>li {
+                background-color: #e6e6e6;
+
+                &:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+            }
+
+            .price__purchase {
+                background-color: #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+            }
+        }
+    }
+
+    &__name {
+        &-cost {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+
+            border: 1px solid #e6e6e6;
+            width: 25rem;
+        }
+
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: $black;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+
+        &>hr {
+            width: 5rem;
+            height: 2px;
+            border: none;
+            background-color: $orange;
+        }
+    }
+
+    &__description {
+        list-style: none;
+        position: relative;
+
+        &>li {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: -2rem;
+            @include p1(1.5rem, normal, $gray);
+            height: 4.9rem;
+            width: 25rem;
+            border: 1px solid #e6e6e6;
+
+            &:nth-child(odd) {
+                background-color: #fafafa;
+            }
+
+        }
+    }
+
+    &__purchase {
+        border: 1px solid #e6e6e6;
+        width: 25rem;
+
+        &-btn {
+            @include btn(1.45rem, 600, 13rem, 3.8rem);
+            background-color: $white;
+            margin: 3.4rem auto 3.3rem auto;
+
+            &:hover {
+                background-color: $orange;
+                color: $white;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,212 @@
+.chapter {
+    &__description {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 11.4rem;
+        justify-content: center
+    }
+
+    &__title {
+        @include h3();
+    }
+
+    &__divider {
+        @extend %divider;
+    }
+
+    &__article {
+        @include p1();
+        text-transform: uppercase;
+        overflow: hidden;
+        width: 88.3rem;
+        height: 4rem;
+
+    }
+}
+
+.chapter__info-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 15.1rem;
+
+}
+
+.logo__chapter {
+    @include logo(12.5rem, 12.5rem, #f39c12);
+}
+
+.chapter__text {
+    @include logoText(far, 4rem, $black);
+}
+
+
+
+.chapter__article-story {
+    height: 25.4rem;
+    width: 50.1rem;
+    text-align: left;
+    margin-left: 2.9rem;
+
+    &>.h4 {
+        @include h4();
+
+    }
+
+    &>.p1 {
+        @include p1();
+        margin-top: 2.4rem;
+
+        &>span {
+            font-size: 1.5rem;
+            color: $darkGray;
+        }
+
+        &-r {
+            @include p1(2rem, 300, $red);
+            margin-top: 3rem;
+        }
+    }
+}
+
+.chapter__video {
+    width: 45rem;
+    height: 25.4rem;
+    background-color: #e74c3c;
+    padding: 110px 204px 112px 205px;
+    margin-left: 6.5rem;
+
+    &>i {
+        font-size: 4.1rem;
+        color: $white;
+    }
+}
+
+.chapter__about-divider {
+    height: 2px;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    background-color: #e6e6e6;
+}
+
+.chapter__info-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.chapter__images {
+    width: 50rem;
+    height: 50rem;
+    margin-left: 2.8rem;
+
+    position: relative;
+
+    &>.iphone {
+        width: 16rem;
+        height: 33.7rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+
+    }
+
+    &>.ipad {
+        width: 37.1rem;
+        height: 48.2rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+
+    }
+}
+
+.chapter__info-wrapper {
+    width: 55.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.chapter__info-text {
+    width: 55.2rem;
+    height: 18rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    &>.chapter__article-story {
+        width: 38.7rem;
+
+        &>p {
+            height: 10.1rem;
+            overflow: hidden;
+            line-height: 2.7rem;
+            margin-right: 1.4rem;
+        }
+    }
+}
+
+.skill__item {
+    width: 100%;
+    margin-top: 4rem;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &-text {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: normal;
+        text-align: left;
+        color: #0d0d0d;
+        text-transform: uppercase;
+
+        &>span {
+            color: #bfbfbf;
+        }
+
+        &>.light {
+            font-weight: 300;
+            color: #0d0d0d;
+        }
+    }
+
+    &-bar {
+        width: 100%;
+        height: 1rem;
+        background-color: #e6e6e6;
+    }
+}
+
+.bar__value {
+    &_one {
+        background-color: $orange;
+        width: 88%;
+        height: 100%;
+    }
+
+    &_two {
+        background-color: $orange;
+        width: 76%;
+        height: 100%;
+    }
+
+    &_three {
+        background-color: $orange;
+        width: 81%;
+        height: 100%;
+    }
+
+    &_four {
+        background-color: $orange;
+        width: 71%;
+        height: 100%;
+    }
+}

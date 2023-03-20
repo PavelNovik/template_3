@@ -1,0 +1,39 @@
+.service__place {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12rem;
+}
+
+.service__moneypart {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &>.chapter__info-text {
+        display: flex;
+        flex-direction: column;
+        height: 33rem;
+        width: 30.9rem;
+
+        &>.chapter__article-story {
+            height: 15.3rem;
+            margin-left: 0;
+        }
+    }
+}
+
+.price__place {
+    display: flex;
+    flex-direction: row;
+    width: 75rem;
+    margin-left: 11rem;
+    position: relative;
+
+}
+
+.price__card {
+    position: relative;
+    bottom: 1.6rem;
+}
